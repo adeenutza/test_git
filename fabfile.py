@@ -6,7 +6,14 @@ def hello(name="world"):
 def host_type():
     run('uname -s')
 
+
+def commit():
+    local("git add .")
+    local("git commit")
+
+def push():
+    local("git push")
+
 def prepare_deploy():
-	local("git add .")
-	local("git commit")
-	local("git push")
+    commit()
+    push()
