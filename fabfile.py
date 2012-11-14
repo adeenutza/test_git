@@ -7,5 +7,6 @@ def host_type():
     run('uname -s')
 
 def prepare_deploy():
-    local("git add . && git commit")
-    local("git push")
+	local("git add .")
+	local("git commit")
+	local("git push")
